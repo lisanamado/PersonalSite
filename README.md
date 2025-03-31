@@ -1,4 +1,3 @@
-# lisanamadohome
-Home for my personal page
+# PersonalSite
 
-must be a very basic photo slider/gallery which will start with the most basic options and keep growing as I need it
+Personal website. Mostly it should work as a portfolio, and it should be able to host my future projects.
