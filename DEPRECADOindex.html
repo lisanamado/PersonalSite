@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisandro Amado</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #282828;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #fafafa;
+        }
+        p.description {
+            color: #fafafa;
+            text-align: center;
+            max-width: 400px;
+        }
+        /* Estilos de la galería */
+        .slider {
+            position: relative;
+            max-width: 1000px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+        .slider img.active {
+            display: block;
+        }
+        /* Estilos de los botones */
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 1px;
+            transition: background-color 0.3s;
+        }
+        .buttons a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>R. Lisandro Amado</h1>
+
+    <div class="slider">
+        <img src="images/epecuenRLA.jpg" alt="Lake Epecuén" loading="lazy" class="active">
+        <img src="images/plaraincendioRLA.jpeg" alt="Villager fighting woodfires at Punta Lara" loading="lazy" >
+        <img src="images/bosqueRLA.jpg" alt="Nothofagus woods at El Chaltén" loading="lazy" >
+        <img src="images/guernicaRLA.jpg" alt="Settlement about to be forcibly dismantled in Guernica" loading="lazy"  >
+        <img src="images/procesionRLA.jpeg" alt="Chatolic procession near Abrapampa" loading="lazy"  >
+        <img src="images/argentinaRLA.jpg" alt="Celebrations after Argentina's won the world football cup semifinals in La Plata" loading="lazy"  >
+        <img src="images/represRLA.jpg" alt="Gendarmerie beats protesters against Javier Milei's government" loading="lazy"  >    
+        <img src="images/abortoRLA.jpg" alt="Women's parade in for the right to abortion at La Plata" loading="lazy"  >
+        <img src="images/malonRLA.jpg" alt="Indigenous march in Jujuy to stop unregulated land expoitaiton" loading="lazy"  >
+        <img src="images/campeonesRLA.jpg" alt="Football fans gather to celebrate Argentina's victory, La Plata" loading="lazy"  >
+        <img src="images/señoRLA.jpg" alt="A rural schoolteacher delivers homework during pandemics near Gral. Belgrano" loading="lazy"  >
+        <img src="images/chaltenRLA.jpg" alt="A night in the woods of El Chaltén" loading="lazy"  >
+
+    </div>
+
+    <div class="buttons">
+        <a href="mailto:lisandroamado@gmail.com">e-mail me</a>
+        <a href="https://github.com/lisanamado" target="_blank">GitHub</a>
+        <a href="https://instagram.com/lisanamado" target="_blank">Instagram</a>
+        <a href="https://buymeacoffee.com/catertico" target="_blank">Buy me a Coffee</a>
+        
+    </div>
+
+    <script>
+        // JavaScript para el desplazamiento automático
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".slider img");
+
+        function showNextImage() {
+            images[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add("active");
+        }
+
+        setInterval(showNextImage, 8000);
+    </script>
+</body>
+</html>

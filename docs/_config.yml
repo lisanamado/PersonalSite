@@ -1,0 +1,70 @@
+# Site settings
+title: R. Lisandro Amado
+email: "lisandroamado@gmail"
+description: "R. Lisandro Amado is a photographer, videographer, traveller and digital creator based in Argentina. Here you will find some of his work and projects."
+url: "https://lisanamado.github.io/"
+baseurl: "/home"
+facebook_username: "lisandro.amado"
+instagram_username: "lisanamado"
+github_username:  "lisanamado"
+share: true
+
+# Owner/author information
+owner:
+  name:   R. Lisandro Amado
+  avatar: avatar.jpg
+  favicon: favicon.ico
+  info: photography website template
+
+# Settings for comments helper
+# Set 'provider' to the comment provider you want to use. (i.e.  Disqus, Intense Debate, livefyre, or Facebook Comments)
+# Set 'provider' to false to turn commenting off globally.
+#Set 'provider: false' to disable comments globally.
+# Disable comments for individual pages/posts by specifying 'comments: false' in the page/post YAML Front Matter.
+#
+comments :
+  provider : false
+
+# Internal nav
+nav:
+  - GALLERY: "https://lisanamado.github.io/gallery/"  
+  - JOURNAL: "https://lisanamado.github.io/journal/"
+  - ABOUT: "https://lisanamado.github.io/about/"
+
+# All translation keys
+translations:
+ # 404.html
+  permalink: "/404.html"
+
+# Server
+destination:      	 ./_site
+port:             	 4000
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+paginate_path: "/journal/page:num/"
+permalink: "/journal/:title/"
+categories_path: "/journal/category/"
+tags_path: "/journal/tag/"
+gems: 
+ - jekyll-paginate
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+# SiteMap
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/writing/"
+        - "/journal/"
+        - "/about/"
+        - "/gallery/"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
