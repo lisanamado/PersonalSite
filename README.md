@@ -1,3 +1,3 @@
 # PersonalSite
 
-Personal website. Mostly it should work as a portfolio, and it should be able to host my future projects.
+Personal website. It should mostly be a portfolio, and able to host my future projects.
