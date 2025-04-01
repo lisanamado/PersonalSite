@@ -157,15 +157,14 @@ images:
 
 <div id="footer" role="contentinfo">
 		<ul class="soc-icons">
+      <li>
+        <a href="mailto:{{ site.email }}" style="
+    color:#dddddd; target="_blank" title="Email">
+                  <i class="fa fa-envelope-o"></i></span>
+              </a> </li>
 
                  {% if site.facebook_username %}
 			<li>
-   <a href="https://facebook.com/{{ site.facebook_username }}" style="
-color:#dddddd; target="_blank" title="Facebook">
-                       <i class="fa fa-facebook"></i>
-                     </span>
-</a></li>
-    {% endif %}
  {% if site.twitter_username %}
 			<li>
    <a href="https://twitter.com/{{ site.twitter_username }}" style="
@@ -182,6 +181,12 @@ color:#dddddd; target="_blank" title="Instagram">
                      </span>
 </a></li>
     {% endif %}
+    <a href="https://facebook.com/{{ site.facebook_username }}" style="
+    color:#dddddd; target="_blank" title="Facebook">
+                           <i class="fa fa-facebook"></i>
+                         </span>
+    </a></li>
+        {% endif %}
                     {% if site.flickr_username %}
 						<li>
    <a href="https://flickr.com/photos/{{ site.flickr_username }}" style="
@@ -204,11 +209,6 @@ color:#dddddd; target="_blank" title="Github">
               <i class="fa fa-github"></i>
                      </span>
                    {% endif %}
-<li>
-    <a href="mailto:{{ site.email }}" style="
-color:#dddddd; target="_blank" title="Email">
-              <i class="fa fa-envelope-o"></i></span>
-          </a> </li>
 	
 					
 		</ul>	
